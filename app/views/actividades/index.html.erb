@@ -1,0 +1,23 @@
+<h1>Actividades</h1>
+<p><a href="/actividades/ingreso">Ingreso</a> | <a href="/actividades/ganancia">Ganancia</a> | <a href="/actividades/activo">Activo</a> | <a href="/actividades/empleo">Empleo</a> | <a href="/actividades/empresas">Empresas</a></p>
+<div style="overflow-x:auto;">
+<table>
+
+  <tbody>
+    <% @activities.each do |cr| %>
+      <tr>
+        <th><%= link_to cr.activity_name, {:action => 'actividad', :id => cr.id} -%></th> 
+      </tr>
+    <% end %>
+      
+  </tbody>
+</table>
+</div>
+<br>
+
+
+<br>
+
+
+
+

@@ -1,0 +1,35 @@
+<h1><%= @activity.activity_name %></h1>
+<p><a href="/actividades">Actividades</a> | <a href="/actividades/ingreso">Ingreso</a> | <a href="/actividades/ganancia">Ganancia</a> | <a href="/actividades/activo">Activo</a> | <a href="/actividades/empleo">Empleo</a> | <a href="/actividades/empresas">Empresas</a></p>
+Ingreso, Ganancia y Activos (millones de dolares) 
+<div style="overflow-x:auto;">
+<table>
+  <thead>
+    <tr>
+        <th>Año</th>
+        <th>Ingreso</th>
+        <th>Ganancia</th>
+        <th>Activo</th>
+        <th>Empleo</th>
+        <th>Empresas</th>
+
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activities.each do |cr| %>
+      <tr>
+        <th><%= cr.year_report %></th>        
+        <td><%= number_with_delimiter(cr.income, precision: 0) %></td> 
+<td><%= number_with_delimiter(cr.profit, precision: 0) %></td> 
+<td><%= number_with_delimiter(cr.asset, precision: 0) %></td> 
+<td><%= number_with_delimiter(cr.employment, precision: 0) %></td> 
+<td><%= number_with_delimiter(cr.empresas, precision: 0) %></td> 
+      </tr>
+    <% end %>
+      
+  </tbody>
+</table>
+</div>
+<br>
+

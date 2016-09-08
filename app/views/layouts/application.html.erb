@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Letapp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+<div class="header">
+<table style="border: 0px solid white;">
+<tbody>
+  <tr>
+    <td style="border: 0px solid white;" valign="top" width="30%">
+         <a href="www.unam.mx"><br><img src="http://let.iiec.unam.mx/sites/let.iiec.unam.mx/files/logo_unam.png" height="60" width="60" class="unam"><br></a>
+    </td>
+    <td style="border: 0px solid white;" valign="top" halign="center" width="30%">
+         <a href="let.iiec.unam.mx"><br><img src="http://let.iiec.unam.mx/sites/let.iiec.unam.mx/files/let_logo.png" height="60" ><br></a>
+    </td>
+    <td style="border: 0px solid white;" valign="top" width="30%">
+          <a href="www.iiec.unam.mx"><br><img src="http://let.iiec.unam.mx/sites/let.iiec.unam.mx/files/logo_iiec.JPG" height="60" width="60" class="iiec"><br></a>
+    </td>
+  </tr>
+</tbody>
+</table>  
+</div>
+
+<ul>
+  <li><a class="active" href="/">Inicio</a></li>
+  <li><a class="active" href="http://let.iiec.unam.mx/">LET</a></li>
+  <li class="dropdown">
+    <a href="/actividades" class="dropbtn">Actividades</a>
+    <div class="dropdown-content">
+      <a href="/actividades/ingreso">Ingreso</a>
+      <a href="/actividades/ganancia">Ganancia</a>
+      <a href="/actividades/activo">Activo</a>
+      <a href="/actividades/empleo">Empleo</a>
+      <a href="/actividades/empresas">Empresas</a>
+    </div>
+  </li>
+  <li class="dropdown"><a href="/paises" class="dropbtn">Paises</a>
+    <div class="dropdown-content">
+      <a href="/paises/ingreso">Ingreso</a>
+      <a href="/paises/ganancia">Ganancia</a>
+      <a href="/paises/activo">Activo</a>
+      <a href="/paises/empleo">Empleo</a>
+      <a href="/paises/empresas">Empresas</a>
+    </div>
+   </li>
+   <li><a class="active" href="/contenidos/metodologia">Metodología</a></li>
+</ul>
+<div class="contenido">
+<%= yield %>
+</div>
+
+<div id="footer">
+
+  <div id="footer_wrapper">
+      </div>
+  
+  <div class="footer_credit">
+
+  <!-- Social Links -->
+  <div id="copyright">
+      <p class="copyright">Hecho en México, 1995-2016 © D.R. Universidad Nacional Autónoma de México.
+Instituto de Investigaciones Económicas. Circuito Mario de la Cueva, Ciudad de la Investigación en Humanidades, Ciudad Universitaria, C.P. 04510, México, CDMX.
+Esta página puede ser reproducida con fines no lucrativos, siempre y cuando no se mutile, se cite la fuente completa y su dirección electrónica. De otra forma requiere permiso previo por escrito de la institución.<br>
+<a href="/contenidos/creditos">Créditos</a> | <a href="/contenidos/aviso_privacidad">Aviso de privacidad</a> | <a href="/contenidos/contacto">Contacto</a></p>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

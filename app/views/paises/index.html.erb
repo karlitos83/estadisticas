@@ -1,0 +1,23 @@
+<h1>Paises</h1>
+<p><a href="/paises/ingreso">Ingreso</a> | <a href="/paises/ganancia">Ganancia</a> | <a href="/paises/activo">Activo</a> | <a href="/paises/empleo">Empleo</a> | <a href="/paises/empresas">Empresas</a></p>
+<div style="overflow-x:auto;">
+<table>
+
+  <tbody>
+    <% @countries.each do |cr| %>
+      <tr>
+        <th><%= link_to cr.country_name, {:action => 'pais', :id => cr.id} -%></th> 
+      </tr>
+    <% end %>
+      
+  </tbody>
+</table>
+</div>
+<br>
+
+
+<br>
+
+
+
+
